@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 
 const productRoutes = require('./routes/productRoutes');
 
+const userRoutes = require('./routes/userRoutes');
+
 require('dotenv').config();
 
 const app = express();
@@ -26,6 +28,9 @@ mongoose
   });
 
 app.use('/api/products', productRoutes);
+
+app.use('/api/users' , userRoutes);
+
 /*
 mongodb+srv://<username>:<password>@cluster0.xgvhkbr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 mongodb+srv://kartikdeshpande2810:z24yoi5C933OhCtX@cluster0.xgvhkbr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
